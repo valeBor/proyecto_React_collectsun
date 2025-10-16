@@ -1,0 +1,61 @@
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5c57a;
+  padding: 10px 30px; /* 🔹 más chico y equilibrado */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== LOGO ===== */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: brown;
+}
+
+/* ===== NAV ===== */
+nav ul {
+  list-style: none;
+  display: flex;              /* 🔹 alinear en una fila */
+  gap: 20px;                  /* separación entre links */
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;       /* 🔹 sin subrayado */
+  color: brown;                /* color de texto */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: white;                /* color al pasar el mouse */
+}
+
+/* ===== ICONO DEL CARRITO ===== */
+.in-cart {
+  background-color: rgb(250, 133, 133);
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  margin-left: 5px;
+  font-size: 0.8rem;
+  vertical-align: middle;
+}
+
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre imagen y texto */
+}
+
+.logo-img {
+  width: 50px;  /* ajustá según tu imagen */
+  height: auto;
+}

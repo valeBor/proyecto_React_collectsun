@@ -1,0 +1,7 @@
+.item-list {
+  display: flex;
+  flex-wrap: wrap; /* Para que salten de línea si no entra todo */
+  justify-content: center; /* Centra el grupo de cards */
+  gap: 20px; /* Espaciado entre cards */
+  padding: 20px;
+}

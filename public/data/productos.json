@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "nombre": "Collares",
+    "precio": 2500,
+    "descripcion":"Collares hechos a medida",
+    "categoria": "accesorios",
+    "imagen": "/images/PXL_20230210_155103661 (2) (1).jpg"
+  },
+  {
+    "id": "2",
+    "nombre": "Artesanales",
+    "precio": 3200,
+    "descripcion":"Hechos a mano",
+    "categoria": "accesorios",
+    "imagen": "/images/PXL_20230423_120455205 (2).jpg"
+  },
+  {
+    "id": "3",
+    "nombre": "Pulseras",
+    "precio": 1800,
+    "descripcion":"Pulseras hechos a medida",
+    "categoria": "accesorios",
+    "imagen": "/images/Polish_20230611_124624431.jpg"
+  },
+  {
+    "id": "4",
+    "nombre": "Cuadros",
+    "precio": 4500,
+    "descripcion":"Hechos a mano",
+    "categoria": "arte",
+    "imagen": "/images/20220930_100414.jpg"
+  },
+  {
+    "id": "5",
+    "nombre": "Dijes",
+    "precio": 2200,
+    "descripcion":"Dijes diseñados a gusto",
+    "categoria": "accesorios",
+    "imagen": "/images/PSX_20230206_221537.jpg"
+  }
+]

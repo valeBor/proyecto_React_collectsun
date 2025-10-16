@@ -1,0 +1,9 @@
+.detail-container {
+  padding-top: 100px; /* separa del header */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 80vh;
+}
+
+
