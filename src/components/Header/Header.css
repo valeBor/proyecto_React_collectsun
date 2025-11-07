@@ -1,61 +1,59 @@
 /* ===== HEADER ===== */
 .header {
+  position: sticky;
+  top: 35px; /* 🔹 igual a la altura del zócalo superior (.section-adbar) */
+  z-index: 2000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f5c57a;
-  padding: 10px 30px; /* 🔹 más chico y equilibrado */
+  background: linear-gradient(to right, #fbdbeb, #fbe9d0);
+  padding: 10px 2rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 60px;
 }
 
 /* ===== LOGO ===== */
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 1.8rem;
   font-weight: bold;
-  color: brown;
+  color: #cbb080;
+}
+
+.logo-img {
+  width: 50px;
+  height: auto;
 }
 
 /* ===== NAV ===== */
 nav ul {
   list-style: none;
-  display: flex;              /* 🔹 alinear en una fila */
-  gap: 20px;                  /* separación entre links */
+  display: flex;
+  gap: 20px;
   margin: 0;
   padding: 0;
 }
 
 nav a {
-  text-decoration: none;       /* 🔹 sin subrayado */
-  color: brown;                /* color de texto */
+  text-decoration: none;
+  color: brown;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: white;                /* color al pasar el mouse */
+  color: #cbb080;
 }
 
 /* ===== ICONO DEL CARRITO ===== */
 .in-cart {
-  background-color: rgb(250, 133, 133);
+  background-color: #cbb080;
   color: white;
   border-radius: 50%;
   padding: 2px 8px;
   margin-left: 5px;
   font-size: 0.8rem;
   vertical-align: middle;
-}
-
-
-
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* espacio entre imagen y texto */
-}
-
-.logo-img {
-  width: 50px;  /* ajustá según tu imagen */
-  height: auto;
 }

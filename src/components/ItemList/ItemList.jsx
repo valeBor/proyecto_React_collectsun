@@ -1,5 +1,5 @@
 import { Item } from "../Item/Item";
-import './ItemList.css';
+import './itemList.css';
 import { Boton } from "../Boton/Boton";
 import { Link } from "react-router-dom";
 
@@ -21,7 +21,6 @@ export const ItemList = ({ lista }) => {
     </>
   );
 };
-
 
 
 

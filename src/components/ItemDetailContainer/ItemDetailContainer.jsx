@@ -1,14 +1,14 @@
+import "./ItemDetailContainer.css";
 import { useEffect, useState } from "react";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
-import './ItemDetailContainer.css';
 
 export const ItemDetailContainer = () => {
   const [detail, setDetail] = useState({});
   const {id}= useParams();
 
   useEffect(() => {
-    fetch("/data/productos.json")
+    fetch("https://690939e32d902d0651b30a9b.mockapi.io/products")
       .then((res) => {
         if (!res.ok) {
           throw new Error("No se encontro el producto");

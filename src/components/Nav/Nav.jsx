@@ -11,8 +11,8 @@ export const Nav = () => {
      <nav>
       <ul>
         <li><Link to={"/"}>Inicio</Link></li>
-        <li> <Link to={"/categoria/accesorios"}>Accesorios</Link></li>
-        <li><Link to={"/categoria/arte"}>Arte</Link></li>
+        <li> <Link to={"/category/accesorios"}>Accesorios</Link></li>
+        <li><Link to={"/category/arte"}>Arte</Link></li>
         
         <li><Link to={"/carrito"}>Carrito</Link>
         {getTotalItems()>0 && (
