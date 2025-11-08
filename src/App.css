@@ -1,14 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  /* evita el scroll horizontal */
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  
+
   text-align: center;
   margin-top: 0;
-  
+
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  /* elimina scroll horizontal */
+  font-family: 'Poppins', sans-serif;
+}
+
+#root,
+.App {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
 
 .logo {
   height: 6em;
@@ -16,9 +47,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -27,6 +60,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -53,34 +87,17 @@ header {
 }*/
 
 
-
-body {
-  margin: 0;
-  padding-top: 0;
-}
-
-html, body, #root, #root > div {
-  height: 100%;
-  width: 100%;
-}
-
 div {
   overflow: visible;
 }
 
-h1{
+h1 {
   color: #cbb080;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-
-
 main {
-  flex: 1; /* empuja el footer hacia abajo */
+  flex: 1;
+  /* empuja el footer hacia abajo */
 }
 
 
@@ -97,9 +114,3 @@ main {
   text-align: center;
   line-height: 35px;
   z-index: 1000; ⬆ más alto que el header */
-
-
-
-
-
-

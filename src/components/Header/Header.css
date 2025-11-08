@@ -7,11 +7,13 @@
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(to right, #fbdbeb, #fbe9d0);
-  padding: 10px 2rem;
+  padding: 8px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   height: 60px;
   width: 100%;
 }
+
+
 
 /* ===== LOGO ===== */
 .logo {

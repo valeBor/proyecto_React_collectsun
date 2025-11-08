@@ -4,15 +4,28 @@
   left: 0;
   width: 100%;
   height: 35px;
-  background-color: #fbdbeb;
-  color:#cbb080;
+  background: linear-gradient(to right, #fbdbeb, #fbe9d0);
+  color: #cbb080;
   display: flex;
-  align-items: center; /* centra verticalmente el texto */
-  justify-content: center; /* centra horizontalmente */
+  align-items: center;
+  justify-content: center;
   font-size: 0.95rem;
   font-weight: 500;
-  z-index: 2000;
+  text-align: center;
+  padding: 0 1rem;
+  z-index: 1001;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* permite que el texto baje en pantallas chicas */
 }
+
+@media (max-width: 480px) {
+  .section-adbar {
+    font-size: 0.8rem;
+    height: auto;
+    padding: 8px 0;
+  }
+}
+
+
 
 
