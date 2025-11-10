@@ -1,69 +1,98 @@
-import { useState } from "react"
-import { CartContext } from "./CartContext"
+import { useState } from "react";
+import { CartContext } from "./CartContext";
+import { toast, ToastContainer } from "react-toastify";
+import { FaShoppingCart, FaTrashAlt, FaSun } from "react-icons/fa";
+import "react-toastify/dist/ReactToastify.css";
+import "./CartProvider.css"; // 🎨 estilos personalizado
 
-export const CartProvider =  ({children}) => {
+
+export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  //Cambiamos la logica de las funciones si usamos Count para agregar cantidad
- 
-  const exists =  (id) => {
-    const exist = cart.some((p) => p.id === id);
-    return exist;
-  };
+  const exists = (id) => cart.some((p) => p.id === id);
 
-    const addItem = (item) => {
+  const addItem = (item) => {
     if (exists(item.id)) {
-      // Cuido mutación a nivel del array
-      const updatedCart = cart.map((prod) => {
-        if (prod.id === item.id) {
-          // Cuido mutación a nivel de objeto
-          return { ...prod, quantity: prod.quantity + item.quantity };
-        } else {
-          return prod;
-        }
-      });
+      const updatedCart = cart.map((prod) =>
+        prod.id === item.id
+          ? { ...prod, quantity: prod.quantity + item.quantity }
+          : prod
+      );
       setCart(updatedCart);
-      alert("Agregado al carrito");
+      toast.info(
+        <span>
+          <FaSun style={{ marginRight: "8px", color: "#cbb080" }} />
+          Cantidad de <strong>{item.name}</strong> actualizada 🌞
+        </span>
+      );
     } else {
       setCart([...cart, item]);
-      alert(`${item.name} agregado`);
+      toast.success(
+        <span>
+          <FaShoppingCart style={{ marginRight: "8px" }} />
+          <strong>{item.name}</strong> agregado al carrito
+        </span>
+      );
     }
   };
-//Vaciar Carrito
-const clearCart = () => {
-    setCart([]);
-}
 
-  // Eliminar producto del carrito con filter
+  const clearCart = () => {
+    setCart([]);
+    toast.warning(
+      <span>
+        <FaSun style={{ marginRight: "8px", color: "#fbdbeb" }} />
+        Carrito vaciado
+      </span>
+    );
+  };
+
   const deleteItem = (id) => {
     const filtered = cart.filter((p) => p.id !== id);
     setCart(filtered);
-    alert("Producto eliminado");
+    toast.error(
+      <span>
+        <FaTrashAlt style={{ marginRight: "8px" }} />
+        Producto eliminado
+      </span>
+    );
   };
 
+  const getTotalItems = () =>
+    cart.reduce((acc, p) => acc + p.quantity, 0);
 
-
-  // Obtener la cantidad total de productos (sumando quantity)
-  const getTotalItems = () => {
-    const totalItems = cart.reduce((acc, p) => acc + p.quantity, 0);
-    return totalItems;
-  };
-
-   // Calcular el total del carrito (precio * cantidad)
-  const total = () => {
-    const total = cart.reduce((acc, p) => acc + p.price * p.quantity, 0);
-    return Math.round(total * 100) / 100;
-  };
+  const total = () =>
+    Math.round(cart.reduce((acc, p) => acc + p.price * p.quantity, 0) * 100) /
+    100;
 
   const checkout = () => {
-     const ok = confirm("¿Seguro que quiere confirmar la compra?");  
-     if (ok) {
-      alert("¡Compra realizada con exito!");
-      clearCart();
-     }
-  };
+  toast.info(
+    <div className="confirm-toast">
+      <p>☀️ ¿Confirmás tu compra?</p>
+      <div className="btn-group">
+        <button
+          className="btn-confirm"
+          onClick={() => {
+            toast.dismiss();
+            toast.success(
+              <span>
+                <FaSun style={{ marginRight: "8px", color: "#cbb080" }} />
+                ¡Compra realizada con éxito!
+              </span>
+            );
+            clearCart();
+          }}
+        >
+          Sí, finalizar
+        </button>
+        <button className="btn-cancel" onClick={() => toast.dismiss()}>
+          Cancelar
+        </button>
+      </div>
+    </div>,
+    { autoClose: false, closeOnClick: false }
+  );
+};
 
-  // Valores expuestos al contexto
   const values = {
     cart,
     addItem,
@@ -77,6 +106,15 @@ const clearCart = () => {
   return (
     <CartContext.Provider value={values}>
       {children}
+      {/* 📦 Contenedor global de notificaciones */}
+      <ToastContainer
+        position="top-right"
+        autoClose={2500}
+        hideProgressBar={false}
+        closeOnClick
+        pauseOnHover
+        theme="light"
+      />
     </CartContext.Provider>
   );
 };
