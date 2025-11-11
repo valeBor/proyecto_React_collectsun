@@ -1,0 +1,85 @@
+/* ===== FORMULARIO PRINCIPAL ===== */
+.form-contact {
+  background-color: #fbe9d0; /* fondo beige */
+  color: #4a3f35; /* texto marrón suave */
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.form-contact h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #b69260; /* dorado suave */
+  font-weight: bold;
+}
+
+/* ===== INPUTS ===== */
+.form-contact .form-control {
+  width: 100%;
+  background-color: #fffaf2;
+  color: #4a3f35;
+  border: 1px solid #cbb080;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-contact .form-control:focus {
+  border-color: #b69260;
+  box-shadow: 0 0 0 0.15rem rgba(203, 176, 128, 0.3);
+  outline: none;
+}
+
+/* ===== BOTÓN CENTRADO ===== */
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-container button {
+  background-color: #cbb080;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 150px;
+}
+
+.button-container button:hover {
+  background-color: #b69260;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .form-contact {
+    padding: 1.25rem;
+    margin: 1rem;
+  }
+
+  .form-contact h3 {
+    font-size: 1.25rem;
+  }
+
+  .form-contact .form-control {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .button-container button {
+    width: 100%; /* 🔹 En móvil ocupa todo el ancho */
+    font-size: 1rem;
+  }
+}
+
+
+
+

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CartContext } from "./CartContext";
 import { toast, ToastContainer } from "react-toastify";
-import { FaShoppingCart, FaTrashAlt, FaSun } from "react-icons/fa";
+import { FaShoppingBag, FaTrashAlt, FaSun } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css";
 import "./CartProvider.css"; // 🎨 estilos personalizado
 
@@ -29,7 +29,7 @@ export const CartProvider = ({ children }) => {
       setCart([...cart, item]);
       toast.success(
         <span>
-          <FaShoppingCart style={{ marginRight: "8px" }} />
+          <FaShoppingBag style={{ marginRight: "8px" }} />
           <strong>{item.name}</strong> agregado al carrito
         </span>
       );
@@ -108,7 +108,7 @@ export const CartProvider = ({ children }) => {
       {children}
       {/* 📦 Contenedor global de notificaciones */}
       <ToastContainer
-        position="top-right"
+        position="top-center"
         autoClose={2500}
         hideProgressBar={false}
         closeOnClick

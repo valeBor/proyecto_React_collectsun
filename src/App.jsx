@@ -7,6 +7,9 @@ import { Cart } from "./components/Cart/Cart";
 import { CartProvider } from "./context/CartContext/CartProvider";
 import { ProductFormContainer } from "./components/adminComponents/ProductFormContainer/ProductFormContainer";
 import { TopBar } from "./components/TopBar/TopBar";
+import { FormContact } from "./components/FormContact/FormContact";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 
 function App() {
@@ -14,8 +17,8 @@ function App() {
     <BrowserRouter>
       <CartProvider>
         <div>
-           
-          <TopBar/>
+
+          <TopBar />
           <Header />
 
           <Routes>
@@ -34,12 +37,24 @@ function App() {
             {/* Detalle de producto */}
             <Route path="/detail/:id" element={<ItemDetailContainer />} />
 
+            {/* 🔹 Agregá esta línea para que funcione el link de contacto */}
+            <Route path="/contacto" element={<FormContact />} />
+
             {/* Carrito */}
             <Route path="/carrito" element={<Cart />} />
             <Route path="/admin" element={<ProductFormContainer />} />
           </Routes>
 
           <Footer />
+          {/* 🔹 ToastContainer global: */}
+          <ToastContainer
+            position="top-center"
+            autoClose={3000}
+            toastClassName="mi-toast"
+          />
+
+
+
         </div>
       </CartProvider>
     </BrowserRouter>
@@ -48,5 +63,5 @@ function App() {
 
 export default App;
 
-  
+
 

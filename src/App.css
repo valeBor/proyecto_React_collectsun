@@ -114,3 +114,10 @@ main {
   text-align: center;
   line-height: 35px;
   z-index: 1000; ⬆ más alto que el header */
+
+  .mi-toast {
+  background-color: #cbb080 !important;
+  color: white !important;
+  border-radius: 10px !important;
+  font-weight: bold;
+}

@@ -1,3 +1,4 @@
+/* === Estilos base que ya tenías === */
 nav ul li a {
   color: #cbb080;
   text-decoration: none;
@@ -8,6 +9,7 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* 🔹 Contador del carrito (lo mantenemos igual) */
 .in-cart {
   background-color: #cbb080;
   font-size: 0.75rem;
@@ -20,3 +22,57 @@ nav ul li a:hover {
   text-align: center;
   margin-left: 0.25rem;
 }
+
+/* === 🔸 NUEVOS estilos para estructura y responsive === */
+.nav {
+  background: linear-gradient(to right, #fbdbeb, #fbe9d0);
+  padding: 1rem 2rem;
+  box-shadow: none;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Layout principal del nav */
+.nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+/* 🔹 Enlaces con íconos (sobresito, carrito, login) */
+.nav-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Hover general */
+.nav a {
+  transition: color 0.2s ease-in-out;
+}
+
+.nav a:hover {
+  color: #9b7a5a;
+  text-decoration: underline;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .nav.open ul {
+    display: flex;
+  }
+}
+
+
