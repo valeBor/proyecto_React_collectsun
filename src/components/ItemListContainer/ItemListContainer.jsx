@@ -38,8 +38,9 @@ useEffect (() => {
         <div className="section-h1">
         <h1>{titulo}</h1>
         </div>
+        <div  className="products-container">
         <ItemList lista={products} />
-        
+        </div>
         </section>
 
     );
