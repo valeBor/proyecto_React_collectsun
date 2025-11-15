@@ -1,0 +1,99 @@
+/* ===== CONTENEDOR CENTRADO ===== */
+.login-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 6rem;
+}
+
+/* ===== FORMULARIO ===== */
+.login-form {
+  background-color: #fbe9d0; /* mismo beige del form-contact */
+  color: #4a3f35; /* marrón suave */
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* ===== TÍTULO ===== */
+.login-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #b69260; /* dorado suave */
+  font-weight: bold;
+}
+
+/* ===== LABELS ===== */
+.login-form label {
+  font-weight: 600;
+  color: #4a3f35;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* ===== INPUTS ===== */
+.login-form input {
+  width: 100%;
+  background-color: #fffaf2; /* mismo color que el contacto */
+  color: #4a3f35;
+  border: 1px solid #cbb080;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #b69260;
+  box-shadow: 0 0 0 0.15rem rgba(203, 176, 128, 0.3);
+  outline: none;
+}
+
+/* ===== BOTÓN ===== */
+.login-btn {
+  background-color: #cbb080;
+  color: white;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #b69260;
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 1rem;
+    margin-top: 4rem;
+  }
+
+  .login-form {
+    padding: 1.25rem;
+  }
+
+  .login-title {
+    font-size: 1.25rem;
+  }
+
+  .login-form input {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .login-btn {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+}

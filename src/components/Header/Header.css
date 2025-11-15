@@ -13,6 +13,12 @@
   width: 100%;
 }
 
+.header {
+  background: linear-gradient(to right, #fbdbeb, #fbe9d0);
+  background-attachment: fixed; /* mejora el look en pantallas grandes */
+}
+
+
 
 
 /* ===== LOGO ===== */
@@ -134,4 +140,11 @@ nav a:hover {
   .logo-img {
     width: 40px;
   }
+}
+
+.header {
+  width: 100%;
+  max-width: 100%;
+  left: 0;
+  right: 0;
 }

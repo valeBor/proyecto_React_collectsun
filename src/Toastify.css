@@ -8,17 +8,17 @@
 
 .Toastify__toast--success {
   background: linear-gradient(to right, #fbe9d0, #cbb080);
-  color:#5c4838;
+  color: #5c4838;
 }
 
 .Toastify__toast--info {
   background: linear-gradient(to right, #fbdbeb, #fbe9d0);
-  color:#5c4838;
+  color: #5c4838;
 }
 
 .Toastify__toast--warning {
   background: #fbdbeb;
-  color:#5c4838;
+  color: #5c4838;
 }
 
 .Toastify__toast--error {
@@ -28,27 +28,16 @@
 
 .Toastify__progress-bar {
   background: rgba(0, 0, 0, 0.2);
-
 }
 
-.Toastify__slide-enter {
-  animation-duration: 0.6s !important; /* más lento al entrar */
-}
-
-.Toastify__slide-exit {
-  animation-duration: 0.6s !important;
-}
-
-.Toastify__zoom-enter {
-  animation-duration: 0.6s !important;
-}
-
+.Toastify__slide-enter,
+.Toastify__slide-exit,
+.Toastify__zoom-enter,
 .Toastify__zoom-exit {
   animation-duration: 0.6s !important;
 }
 
-
-/* ====== Toast de confirmación (checkout) ====== */
+/* ==== Toast de confirmación ==== */
 .confirm-toast {
   text-align: center;
   padding: 1rem 1.2rem;
@@ -77,7 +66,7 @@
   transition: all 0.2s ease;
 }
 
-/* Botón "Sí, finalizar" */
+/* Confirmar */
 .confirm-toast .btn-confirm {
   background: #cbb080;
   color: #fff;
@@ -88,15 +77,14 @@
   transform: translateY(-2px);
 }
 
-/* Botón "Cancelar" */
+/* Cancelar */
 .confirm-toast .btn-cancel {
   background: #fbdbeb;
   border: 1px solid #cbb080;
   color: #5c4838;
   font-size: 0.9rem;
   padding: 8px 10px;
-  line-height: 1.2; /* 🔹 mantiene centrado el texto */
-
+  line-height: 1.2;
 }
 
 .confirm-toast .btn-cancel:hover {

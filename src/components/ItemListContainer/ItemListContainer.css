@@ -25,3 +25,16 @@ margin-top: 50px;
     max-width: 1400px;
   }
 }
+
+.products-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  width: 100%;
+  max-width: 1800px; /* más grande */
+  margin: 0 auto;
+  padding: 2rem 4rem;
+  box-sizing: border-box;
+}
+

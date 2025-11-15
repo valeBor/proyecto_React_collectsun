@@ -1,3 +1,6 @@
+/* ============================
+   🧱 1. RESET Y CONFIGURACIÓN BASE
+   ============================ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,116 +11,135 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
-  /* evita el scroll horizontal */
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth; /* desplazamiento suave al navegar */
+  background-color: #fff;
 }
 
+/* Contenedor principal */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-
-  text-align: center;
-  margin-top: 0;
-
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-html,
-body {
-  width: 100%;
-  overflow-x: hidden;
-  /* elimina scroll horizontal */
-  font-family: 'Poppins', sans-serif;
-}
 
-#root,
-.App {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-
-/* Ajustar Header si usás posición fija 
-header {
-  margin-top: 35px;
-}*/
-
-
-div {
-  overflow: visible;
-}
-
-h1 {
-  color: #cbb080;
-}
-
+/* Asegura que el contenido principal empuje el footer */
 main {
   flex: 1;
-  /* empuja el footer hacia abajo */
 }
 
-
-
-
-/*.section-adbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 35px;
-  background-color: #fbdbeb;
-  color: #000;
+/* ============================
+   🎨 2. ESTILOS GLOBALES VISUALES
+   ============================ */
+h1, h2, h3 {
+  color: #cbb080;
+  font-weight: bold;
   text-align: center;
-  line-height: 35px;
-  z-index: 1000; ⬆ más alto que el header */
+}
 
-  .mi-toast {
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Toast global */
+.mi-toast {
   background-color: #cbb080 !important;
   color: white !important;
   border-radius: 10px !important;
   font-weight: bold;
 }
+
+/* ============================
+   🧩 3. CONTENEDOR GLOBAL
+   ============================ */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ============================
+   📱 4. MEDIA QUERIES GLOBALES
+   ============================ */
+
+/* --- Móviles pequeños (hasta 480px) --- */
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.2rem; }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  button, .btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+/* --- Tablets y notebooks (481px a 1024px) --- */
+@media (max-width: 1024px) {
+  .products-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    padding: 1rem;
+  }
+
+  .form-contact {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  header, nav {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* --- Escritorios grandes (más de 1400px) --- */
+@media (min-width: 1400px) {
+  #root {
+    max-width: 1600px;
+  }
+
+  .products-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    max-width: 1400px;
+  }
+
+  header, nav {
+    justify-content: center;
+    padding: 1.5rem 4rem;
+  }
+
+  .section-h1 {
+    margin-top: 4rem;
+  }
+}
+
+
+
+
+
+

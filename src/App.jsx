@@ -1,27 +1,27 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { Cart } from "./components/Cart/Cart";
 import { CartProvider } from "./context/CartContext/CartProvider";
 import { ProductFormContainer } from "./components/adminComponents/ProductFormContainer/ProductFormContainer";
-import { TopBar } from "./components/TopBar/TopBar";
 import { FormContact } from "./components/FormContact/FormContact";
-import { ToastContainer } from "react-toastify";
+import { MainLayout } from "./layouts/MainLayout";
+import { AdminLayout } from "./layouts/AdminLayout";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
+import "./Toastify.css";
+import { Login } from "./components/Login/Login";
+import {RutaProtegida} from "./components/RutaProtegida/RutaProtegida";
+import LoginUser from "./components/LoginUser/LoginUser";
 
 function App() {
   return (
     <BrowserRouter>
       <CartProvider>
-        <div>
 
-          <TopBar />
-          <Header />
-
-          <Routes>
+        <Routes>
+          <Route element={<MainLayout />}  >
             {/* Ruta principal: muestra todos los productos */}
             <Route
               path="/"
@@ -42,20 +42,29 @@ function App() {
 
             {/* Carrito */}
             <Route path="/carrito" element={<Cart />} />
-            <Route path="/admin" element={<ProductFormContainer />} />
-          </Routes>
 
-          <Footer />
-          {/* 🔹 ToastContainer global: */}
-          <ToastContainer
-            position="top-center"
-            autoClose={3000}
-            toastClassName="mi-toast"
-          />
+            
+            <Route path="/login-user" element={<LoginUser />} />
 
+          </Route>
 
+          <Route path="/admin" element={<AdminLayout />}>
 
-        </div>
+            <Route index element={<Login/>} />
+            <Route path="alta-productos" element={<RutaProtegida>
+              <ProductFormContainer />
+            </RutaProtegida>}
+            />
+
+          </Route>
+
+          {/*<Route path="/admin" element={<ProductFormContainer />} />*/}
+
+        </Routes>
+
+        <Footer />
+        
+
       </CartProvider>
     </BrowserRouter>
   );

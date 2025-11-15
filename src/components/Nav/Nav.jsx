@@ -24,7 +24,7 @@ export const Nav = ({ isOpen }) => {
         {/* 🔹 Carrito con ícono y contador */}
         <li>
           <Link to="/carrito" className="nav-icon">
-              <FaShoppingBag size={18} style={{ marginRight: "5px" }} />
+            <FaShoppingBag size={18} style={{ marginRight: "5px" }} />
             {getTotalItems() > 0 && (
               <span className="in-cart">{getTotalItems()}</span>
             )}
@@ -33,9 +33,10 @@ export const Nav = ({ isOpen }) => {
 
         {/* 🔹 Login con ícono */}
         <li>
-          <Link to="/login" className="nav-icon">
-            <FaUser /> 
+          <Link to="/login-user" className="nav-icon">
+            <FaUser />
           </Link>
+
         </li>
       </ul>
     </nav>

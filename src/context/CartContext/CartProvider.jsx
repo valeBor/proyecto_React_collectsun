@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { CartContext } from "./CartContext";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import { FaShoppingBag, FaTrashAlt, FaSun } from "react-icons/fa";
+
+
 import "react-toastify/dist/ReactToastify.css";
 import "./CartProvider.css"; // 🎨 estilos personalizado
 
@@ -106,15 +108,6 @@ export const CartProvider = ({ children }) => {
   return (
     <CartContext.Provider value={values}>
       {children}
-      {/* 📦 Contenedor global de notificaciones */}
-      <ToastContainer
-        position="top-center"
-        autoClose={2500}
-        hideProgressBar={false}
-        closeOnClick
-        pauseOnHover
-        theme="light"
-      />
     </CartContext.Provider>
   );
 };

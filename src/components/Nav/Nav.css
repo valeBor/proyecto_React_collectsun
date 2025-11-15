@@ -1,87 +1,49 @@
-/* === Estilos base que ya tenías === */
-nav ul li a {
-  color: #cbb080;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* 🔹 Contador del carrito (lo mantenemos igual) */
-.in-cart {
-  background-color: #cbb080;
-  font-size: 0.75rem;
-  font-weight: bold;
-  color: white;
-  border-radius: 50%;
-  padding: 0.25rem 0.5rem;
-  display: inline-block;
-  min-width: 20px; /* asegura que sea redondo aunque sea "1" */
-  text-align: center;
-  margin-left: 0.25rem;
-}
-
-/* === 🔸 NUEVOS estilos para estructura y responsive === */
 .nav {
-  background: linear-gradient(to right, #fbdbeb, #fbe9d0);
-  padding: 1rem 2rem;
-  box-shadow: none;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* Layout principal del nav */
-.nav ul {
+  width: 100%;
+  background: transparent; /* el color lo maneja el header */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
   list-style: none;
-  margin: 0;
   padding: 0;
-  flex-wrap: wrap;
+  margin: 0;
 }
 
-/* 🔹 Enlaces con íconos (sobresito, carrito, login) */
-.nav-icon {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-/* Hover general */
 .nav a {
+  color: #cbb080;
+  text-decoration: none;
+  font-weight: bold;
   transition: color 0.2s ease-in-out;
 }
 
 .nav a:hover {
   color: #9b7a5a;
-  text-decoration: underline;
+}
+
+.in-cart {
+  background-color: #cbb080;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.25rem;
+  font-weight: bold;
 }
 
 /* 🔹 Responsive */
 @media (max-width: 768px) {
   .nav ul {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.75rem;
   }
-
-  .nav.open ul {
-    display: flex;
-  }
-}
-
-.nav {
-  width: 100%;             /* 🔹 Asegura que ocupe todo el ancho */
-  max-width: 100%;         /* 🔹 Evita límites si hereda de un contenedor */
-  left: 0;
-  right: 0;
-  top: 0;
-  margin: 0;
 }
 
 
