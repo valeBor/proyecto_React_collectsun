@@ -1,25 +1,28 @@
-/* ===== HEADER ===== */
+/* ====== HEADER (fondo completo de pantalla) ====== */
 .header {
   position: sticky;
-  top: 35px; /* 🔹 igual a la altura del zócalo superior (.section-adbar) */
+  top: 35px; 
   z-index: 2000;
+
+  width: 100%;
+  left: 0;
+  right: 0;
+
+  background: linear-gradient(to right, #fbdbeb, #fbe9d0);
+  padding: 8px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== CONTENEDOR INTERNO (centrado y con ancho máximo) ====== */
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #fbdbeb, #fbe9d0);
-  padding: 8px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 60px;
-  width: 100%;
 }
-
-.header {
-  background: linear-gradient(to right, #fbdbeb, #fbe9d0);
-  background-attachment: fixed; /* mejora el look en pantallas grandes */
-}
-
-
-
 
 /* ===== LOGO ===== */
 .logo {
@@ -33,30 +36,31 @@
 
 .logo-img {
   width: 50px;
-  height: auto;
 }
 
-/* ===== NAV ===== */
+/* ===== NAV DESKTOP ===== */
+.nav-container {
+  display: block;
+}
+
 nav ul {
-  list-style: none;
   display: flex;
   gap: 20px;
-  margin: 0;
-  padding: 0;
+  list-style: none;
 }
 
 nav a {
   text-decoration: none;
   color: brown;
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 nav a:hover {
   color: #cbb080;
 }
 
-/* ===== ICONO DEL CARRITO ===== */
+/* ====== ICONO CARRITO ===== */
 .in-cart {
   background-color: #cbb080;
   color: white;
@@ -64,87 +68,51 @@ nav a:hover {
   padding: 2px 8px;
   margin-left: 5px;
   font-size: 0.8rem;
-  vertical-align: middle;
 }
 
-/* ======== 📱 BOTÓN HAMBURGUESA ======== */
+/* ====== BOTÓN HAMBURGUESA ====== */
 .menu-toggle {
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
   color: brown;
-  display: none;
-  transition: transform 0.3s ease;
   z-index: 3000;
 }
 
-.menu-toggle:hover {
-  transform: scale(1.1);
-}
-
-.menu-toggle svg {
-  width: 22px;
-  height: 22px;
-}
-
-/* ======== 📱 MENÚ RESPONSIVE ======== */
-.nav-container {
-  display: block;
-}
-
-/* ======== 📱 VISTA MÓVIL ======== */
+/* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
   .nav-container {
     display: none;
     position: absolute;
-    top: 60px; /* justo debajo del header */
+    top: 60px;
     left: 0;
     width: 100%;
-    background: linear-gradient(to right, #fbdbeb, #fbe9d0);
-    text-align: center;
     padding: 1rem 0;
+
+    background: linear-gradient(to right, #fbdbeb, #fbe9d0);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 1500;
+    text-align: center;
   }
 
   .nav-container.open {
     display: block;
   }
 
-  /* Menú interno */
   .nav-container ul {
     flex-direction: column;
     gap: 12px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-container a {
-    font-size: 1rem;
-    color: brown;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-    gap: 6px;
   }
 
   .logo-img {
     width: 40px;
   }
-}
 
-.header {
-  width: 100%;
-  max-width: 100%;
-  left: 0;
-  right: 0;
+  .logo {
+    font-size: 1.5rem;
+  }
 }
