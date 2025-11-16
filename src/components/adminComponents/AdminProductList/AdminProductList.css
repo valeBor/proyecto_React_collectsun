@@ -1,0 +1,153 @@
+/* ============ LISTA DE PRODUCTOS ADMIN ============ */
+
+.admin-list {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.75rem 2rem;
+  background: #f6e8cf; /* tono pastel arena */
+  border-radius: 14px;
+  box-shadow: 0 6px 12px rgba(170, 140, 100, 0.25);
+  font-family: "Poppins", sans-serif;
+  color: #5c4b3b;
+}
+
+.admin-list h2 {
+  text-align: center;
+  font-size: 1.9rem;
+  margin-bottom: 1.5rem;
+  color: #8b5e34;
+  font-weight: 600;
+}
+
+/* Contenedor de cada producto */
+.admin-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #fff7e8; /* pastel claro */
+  border: 2px solid #d8c4a0;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.admin-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(170, 140, 100, 0.18);
+}
+
+/* Imagen del producto */
+.admin-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #d8c4a0;
+}
+
+/* Nombre y precio */
+.admin-item h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #8b5e34;
+}
+
+.admin-item p {
+  margin: 0.2rem 0 0 0;
+  font-weight: 500;
+  color: #6e553f;
+}
+
+/* Botón editar */
+.btn-edit {
+  padding: 0.5rem 1rem;
+  background: #f5c87a; /* amarillo pastel */
+  color: #5c4b3b;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-edit:hover {
+  background: #f7d8a6;
+}
+
+.btn-edit:active {
+  transform: translateY(2px);
+}
+
+/* Botón eliminar */
+.btn-delete {
+  padding: 0.5rem 1rem;
+  background: #e06c4b; /* rojo pastel */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-delete:hover {
+  background: #f28e73;
+}
+
+.btn-delete:active {
+  transform: translateY(2px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .admin-item {
+    grid-template-columns: 70px 1fr;
+    grid-template-areas:
+      "img info"
+      "edit edit"
+      "delete delete";
+    text-align: center;
+  }
+
+  .admin-item img {
+    margin: 0 auto;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+.confirm-toast {
+  text-align: center;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-confirm {
+  background: #cbb080;
+  border: none;
+  padding: 6px 12px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background: #b4b4b4;
+  border: none;
+  padding: 6px 12px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+

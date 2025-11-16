@@ -1,8 +1,25 @@
 .item-list {
-  display: flex;
-  flex-wrap: wrap; /* Para que salten de línea si no entra todo */
-  justify-content: center; /* Centra el grupo de cards */
-  gap: 20px; /* Espaciado entre cards */
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
+
+.item-link {
+  width: 100%;
+  max-width: 300px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.item-link:hover {
+  transform: translateY(-5px);
+}
+
+
 

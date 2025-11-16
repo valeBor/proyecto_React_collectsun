@@ -22,7 +22,7 @@ export const ItemListContainer = ({ titulo }) => {
 
 
   return (
-    <section className="section-creacionesS">
+    <section className="section-creaciones">
       <div className="section-h1">
         <h1>{titulo}</h1>
       </div>

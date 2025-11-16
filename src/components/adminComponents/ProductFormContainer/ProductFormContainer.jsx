@@ -3,6 +3,7 @@ import { ProductFormUI } from "../ProductFormUI/ProductFormUI";
 import { validateProduct } from "../../../utils/validateProducts";
 import { uploadToImgbb } from "../../../services/uploadImage";
 import { createProduct } from "../../../services/products";
+import { toast } from "react-toastify";
 
 import "../ProductFormContainer/ProductFormContainer.css";
 
@@ -43,7 +44,9 @@ export const ProductFormContainer = () => {
       };
 
       await createProduct(productData);
-      alert("Producto cargado con exito");
+      
+      toast.success("Producto cargado con éxito");
+
 
       setProduct({ name: "", price: "", category: "", description: "" });
       setFile(null);
