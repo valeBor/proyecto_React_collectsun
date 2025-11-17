@@ -10,10 +10,12 @@
 html,
 body {
   width: 100%;
-  overflow-x: hidden;
+  
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth; /* desplazamiento suave al navegar */
   background-color: #fff;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 /* Contenedor principal */

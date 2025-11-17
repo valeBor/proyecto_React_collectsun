@@ -1,0 +1,15 @@
+.main-content {
+  width: 100%;
+  max-width: 2000px; /* aumentamos más */
+  margin: 0 auto;
+  padding: 2rem 3rem; /* más respiración horizontal */
+  box-sizing: border-box;
+  margin-top: 6rem ;
+
+}
+
+@media (min-width: 2000px) {
+  .main-content {
+    max-width: 2200px;
+  }
+}
