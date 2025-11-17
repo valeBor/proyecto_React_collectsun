@@ -12,8 +12,9 @@
 
 .product-item img {
   width: 100%;
-  height: auto; /* mantiene proporción */
+  height: 260px; /* mantiene proporción */
   display: block;
+  object-fit: cover;
 }
 
 .product-item:hover {

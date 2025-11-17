@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Nav.css";
 import { useCartContext } from "../../context/CartContext/useCartContext";
-import { FaEnvelope, FaShoppingCart, FaUser } from "react-icons/fa";
+import { FaEnvelope, FaUser } from "react-icons/fa";
 import { FaShoppingBag } from "react-icons/fa";  // FontAwesome
 
 export const Nav = ({ isOpen }) => {
