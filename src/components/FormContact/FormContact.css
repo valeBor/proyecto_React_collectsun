@@ -4,9 +4,11 @@
   color: #4a3f35; /* texto marrón suave */
   padding: 2rem;
   border-radius: 12px;
-  max-width: 500px;
-  margin: 2rem auto;
+  max-width: 420px;
+  margin: auto;
   margin-top: 6rem;
+  margin-bottom: 6rem;
+  justify-content: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
@@ -63,7 +65,8 @@
 @media (max-width: 600px) {
   .form-contact {
     padding: 1.25rem;
-    margin: 1rem;
+    
+    margin-top: 4rem;
   }
 
   .form-contact h3 {
